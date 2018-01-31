@@ -1,0 +1,32 @@
+{
+    "name": "mares29/laravel-ip-filter",
+    "description": "Filter request by IP addresses for Laravel",
+    "keywords": [
+        "mares29",
+        "laravel",
+        "filter-ip-address",
+        "middleware"
+    ],
+    "homepage": "https://github.com/mares29/laravel-ip-filter",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Karel Mares",
+            "email": "karel@mares29.cz",
+            "homepage": "https://karelmares.cz",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Mares29\\IpFilter\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mares29\\IpFilter\\FilterIpServiceProvider"
+            ]
+        }
+    }
+}
