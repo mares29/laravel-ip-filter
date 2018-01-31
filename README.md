@@ -1,6 +1,6 @@
 # Breadcrumb for Laravel 5
 
-This package provide simple way to filter by IP addresses for your Laravel 5 application.
+This package provide simple way to filter user access by IP addresses for your Laravel 5 application.
 
 ## Install
 
@@ -20,13 +20,13 @@ Laravel 5.5+ automaticly register service provider and set Alias thanks to auto-
 
 ## Usage
 
-Export filter for IpFilter
+Export filter config.
 
 ``` terminal
 php artisan vendor:publish --provider="Mares29\IpFilter\FilterIpServiceProvider"
 ```
 
-Use one **black list** or **white list**. For example, allow acces only from ip address *127.0.0.1*.
+Use one of **black list** or **white list** method. For example, allow acces only from ip address *127.0.0.1*.
 
 ``` php
 	// White list - List of allowed IP addresses
@@ -38,7 +38,7 @@ Use one **black list** or **white list**. For example, allow acces only from ip 
 	'denied' => [],
 ```
 
-Add middleware for Yours all web routes.
+Add middleware for all Your web routes.
 
 ``` php
 protected function mapWebRoutes()
@@ -49,7 +49,7 @@ protected function mapWebRoutes()
              ->group(base_path('routes/web.php'));
     }
 ```
-or just for specific routes
+Or just for specific routes.
 
 ``` php
 Route::get('/', function () {
