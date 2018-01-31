@@ -26,6 +26,14 @@ Export filter config.
 php artisan vendor:publish --provider="Mares29\IpFilter\FilterIpServiceProvider"
 ```
 
+By default the filter is active only on **production** environment, but you can specify Your own settings in config file.
+
+``` php
+	// Env - only use filter on listed environments
+	'env' => ['production'],
+```
+
+
 Use one of **black list** or **white list** method. For example, allow acces only from ip address *127.0.0.1*.
 
 ``` php
