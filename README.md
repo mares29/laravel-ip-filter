@@ -67,7 +67,7 @@ Route::get('/', function () {
 
 ## Credits
 
-- [Karel Mares][https://github.com/mares29]
+- [Karel Mares](https://github.com/mares29)
 
 ## License
 
