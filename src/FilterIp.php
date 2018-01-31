@@ -18,13 +18,16 @@ class FilterIp
 	{
 		$whiteList = config('ip-filter.allowed', []);
 		$blackList = config('ip-filter.denied', []);
+		$environments = config('ip-filter.env', []);
+		$appEnvironment = config('app.env');
 		$ip = $request->ip();
 
 		if (
-			(!count($whiteList) && !count($blackList)) ||
-			count($whiteList) > 0 && in_array($ip, $whiteList) ||
-			count($blackList) > 0 && !in_array($ip, $blackList)
-		) {
+			!in_array($appEnvironment, $environments) || (
+				(!count($whiteList) && !count($blackList)) ||
+				count($whiteList) > 0 && in_array($ip, $whiteList) ||
+				count($blackList) > 0 && !in_array($ip, $blackList)
+			)) {
 			return $next($request);
 		}
 	}

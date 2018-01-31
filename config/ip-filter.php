@@ -12,6 +12,9 @@ return [
     |
     */
 
+	// Env - only use filter on listed environments
+	'env' => ['production'],
+
 	// White list - List of allowed IP addresses
 	'allowed' => [],
 
