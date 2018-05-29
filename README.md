@@ -1,4 +1,4 @@
-# Breadcrumb for Laravel 5
+# IP Filter for Laravel 5 Application
 
 This package provide simple way to filter user access by IP addresses for your Laravel 5 application.
 
