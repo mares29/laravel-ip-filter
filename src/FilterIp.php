@@ -30,5 +30,7 @@ class FilterIp
 			)) {
 			return $next($request);
 		}
+		
+		abort(403, 'Forbidden');
 	}
 }
